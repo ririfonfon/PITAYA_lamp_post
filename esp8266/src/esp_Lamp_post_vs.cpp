@@ -8,7 +8,7 @@
 
 #define LAMP_POST 1 //ID du lamp_post
 
-//#define DEBUG 1
+#define DEBUG 1
 //#define DEBUGDMX 1
 //#define DEBUGDMXvalue 1
 //#define DEBUGTOUCH 1
