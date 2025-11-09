@@ -12,8 +12,8 @@
 //#define DEBUGDMX 1
 //#define DEBUGDMXvalue 1
 //#define DEBUGTOUCH 1
-//#define DEBUGMP3 1
-//#define DEBUGSTATE 1
+#define DEBUGMP3 1
+#define DEBUGSTATE 1
 
 /***************************** WIRE ********************/
 #include <Arduino.h>
@@ -139,17 +139,14 @@ void loop()
   {
     fade_white();
   }
-
   else if (state == 2)
   {
     bingo_chase();
   }
-
   else if (state == 6)
   {
     fade_to();
   }
-
   else if (state == 9)
   {
 #ifdef DEBUGSTATE
@@ -164,7 +161,6 @@ void loop()
     state = 0;
     rnd = 0;
   }
-
   else if (state == 12)
   {
     fade_pink();
