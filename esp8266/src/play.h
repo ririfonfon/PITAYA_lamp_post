@@ -14,6 +14,10 @@ void play_seq()
 #endif
   if (cmd != 1)
   {
+    #ifdef DEBUGSTATE
+        Serial.print("send play_seq mp3 : ");
+        Serial.println(millis());
+    #endif
     sendCommand(CMD_FOLDER_CYCLE, 0x0101);
     seq = 0;
     part = 0;
@@ -58,6 +62,7 @@ void play_seq()
       {
         part = 0;
         cmd = 0;
+        DEBUGSR = true;
       }
     }
   }
