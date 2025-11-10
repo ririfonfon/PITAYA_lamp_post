@@ -7,12 +7,13 @@
 /**************************************************************************/
 
 #define LAMP_POST 1 //ID du lamp_post
+#define Boucle_Loop 1 // nombre de boucle de blabla
 
 #define DEBUG 1
-//#define DEBUGDMX 1
-//#define DEBUGDMXvalue 1
+// #define DEBUGDMX 1
+// #define DEBUGDMXvalue 1
 //#define DEBUGTOUCH 1
-#define DEBUGMP3 1
+// #define DEBUGMP3 1
 #define DEBUGSTATE 1
 
 /***************************** WIRE ********************/
@@ -58,6 +59,7 @@ void setup()
 #ifdef DEBUG
   Serial.begin(74880);      //74880 freq de l'esp8266 crash
   Serial.setDebugOutput(1); //use uart0 for debugging
+  delay(1000);
   Serial.println("setup");
 #endif
 
@@ -106,67 +108,126 @@ void loop()
 
   /**************Prog****************/
 
-  trig();
+//   trig();
 
-  if (distance <= presence && rnd == 0)
-  {
-    tir++;
-    if (tir <= 9)
-    {
-      state = 1;
-    }
-    else if (tir >= 10)
-    {
-      tir = 0;
-      state = 2;
-    }
+//   if (distance <= presence && rnd == 0)
+//   {
+//     tir++;
+//     if (tir <= 9)
+//     {
+//       state = 1;
+//     }
+//     else if (tir >= 10)
+//     {
+//       tir = 0;
+//       state = 2;
+//     }
 
-#ifdef DEBUGSTATE
-    Serial.print("state de rnd :");
-    Serial.print(state);
-    Serial.print(" /rnd :");
-    Serial.println(rnd);
-#endif
-    rnd = 1;
-    distance = no_presence;
-  }
+// #ifdef DEBUGSTATE
+//     Serial.print("state de rnd :");
+//     Serial.print(state);
+//     Serial.print(" /rnd :");
+//     Serial.println(rnd);
+// #endif
+//     rnd = 1;
+//     distance = no_presence;
+//   }
 
+  
   if (state == 0)
   {
+    #ifdef DEBUGSTATE
+    if (DEBUGSR) {
+      Serial.print("state :");
+      Serial.print(state);
+      Serial.print(" /rnd :");
+      Serial.println(rnd);
+      DEBUGSR = false;
+    }
+    #endif
     play_seq();
   }
   else if (state == 1)
   {
+    #ifdef DEBUGSTATE
+    if (DEBUGSR) {
+      Serial.print("state :");
+      Serial.print(state);
+      Serial.print(" /rnd :");
+      Serial.println(rnd);
+      DEBUGSR = false;
+    }
+    #endif
     fade_white();
   }
   else if (state == 2)
   {
+    #ifdef DEBUGSTATE
+    if (DEBUGSR) {
+      Serial.print("state :");
+      Serial.print(state);
+      Serial.print(" /rnd :");
+      Serial.println(rnd);
+      DEBUGSR = false;
+    }
+    #endif
     bingo_chase();
   }
   else if (state == 6)
   {
+    #ifdef DEBUGSTATE
+    if (DEBUGSR) {
+      Serial.print("state :");
+      Serial.print(state);
+      Serial.print(" /rnd :");
+      Serial.println(rnd);
+      DEBUGSR = false;
+    }
+    #endif
     fade_to();
   }
   else if (state == 9)
   {
-#ifdef DEBUGSTATE
-    Serial.print("state :");
-    Serial.print(state);
-    Serial.print(" /rnd :");
-    Serial.println(rnd);
-#endif
+    #ifdef DEBUGSTATE
+    if (DEBUGSR) {
+      Serial.print("state :");
+      Serial.print(state);
+      Serial.print(" /rnd :");
+      Serial.println(rnd);
+      DEBUGSR = false;
+    }
+    #endif
     part = 0;
     seq = 0;
     level = 0;
     state = 0;
     rnd = 0;
+    DEBUGSR = true;
   }
   else if (state == 12)
   {
+    #ifdef DEBUGSTATE
+    if (DEBUGSR) {
+      Serial.print("state :");
+      Serial.print(state);
+      Serial.print(" /rnd :");
+      Serial.println(rnd);
+      DEBUGSR = false;
+    }
+    #endif
     fade_pink();
   }
   else if (state == 13)
   {
+    #ifdef DEBUGSTATE
+    if (DEBUGSR) {
+      Serial.print("state :");
+      Serial.print(state);
+      Serial.print(" /rnd :");
+      Serial.println(rnd);
+      DEBUGSR = false;
+    }
+    #endif
     fade_rouge();
   }
 }
