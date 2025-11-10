@@ -15,6 +15,10 @@ void bingo_chase()
 #endif
   if (cmd != 7)
   {
+#ifdef DEBUGSTATE
+    Serial.print("send play_seq mp3 berlin : ");
+    Serial.println(millis());
+#endif
     lastbingo = millis();
     sendCommand(CMD_FOLDER_CYCLE, 0x0701);
     delay(1000);

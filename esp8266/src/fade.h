@@ -21,6 +21,10 @@ void fade_white()
 
   if (cmd != 2)
   {
+#ifdef DEBUGSTATE
+    Serial.print("send play_seq mp3  white : ");
+    Serial.println(millis());
+#endif
     sendCommand(CMD_FOLDER_CYCLE, 0x0201);
     delay(temp_mp3);
     cmd = 2;
@@ -100,6 +104,10 @@ void fade_rouge()
 #endif
   if (cmd != 4)
   {
+#ifdef DEBUGSTATE
+    Serial.print("send play_seq mp3 rouge : ");
+    Serial.println(millis());
+#endif
     sendCommand(CMD_FOLDER_CYCLE, 0x0601);
     delay(temp_mp3);
     cmd = 4;
@@ -176,6 +184,10 @@ void fade_pink()
 
   if (cmd != 5)
   {
+#ifdef DEBUGSTATE
+    Serial.print("send play_seq mp3 pink : ");
+    Serial.println(millis());
+#endif
     sendCommand(CMD_FOLDER_CYCLE, 0x0501);
     delay(temp_mp3);
     cmd = 5;
@@ -220,10 +232,10 @@ void fade_pink()
   }
 
   p++;
-  if (p >= loop_time)
+  if (p >= loop_time + 8000)
   {
     p = 0;
-    state = 6;
+    state = 2;
     DEBUGSR = true;
   }
 

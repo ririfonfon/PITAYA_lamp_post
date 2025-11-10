@@ -7,14 +7,14 @@
 /**************************************************************************/
 
 #define LAMP_POST 1 //ID du lamp_post
-#define Boucle_Loop 1 // nombre de boucle de blabla
+#define Boucle_Loop 3 // nombre de boucles de blabla
 
 #define DEBUG 1
 // #define DEBUGDMX 1
 // #define DEBUGDMXvalue 1
 //#define DEBUGTOUCH 1
 // #define DEBUGMP3 1
-#define DEBUGSTATE 1
+// #define DEBUGSTATE 1
 
 /***************************** WIRE ********************/
 #include <Arduino.h>

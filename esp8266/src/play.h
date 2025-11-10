@@ -14,15 +14,26 @@ void play_seq()
 #endif
   if (cmd != 1)
   {
-    #ifdef DEBUGSTATE
-        Serial.print("send play_seq mp3 : ");
-        Serial.println(millis());
-    #endif
-    sendCommand(CMD_FOLDER_CYCLE, 0x0101);
-    seq = 0;
-    part = 0;
-    delay(temp_mp3);
-    cmd = 1;
+    boucle_Loop_count++;
+    if (boucle_Loop_count > Boucle_Loop)
+    {
+      cmd = 0;
+      boucle_Loop_count = 0;
+      DEBUGSR = true;
+      state = 12;
+    }
+    else
+    {
+#ifdef DEBUGSTATE
+      Serial.print("send play_seq mp3 blabla : ");
+      Serial.println(millis());
+#endif
+      sendCommand(CMD_FOLDER_CYCLE, 0x0101);
+      seq = 0;
+      part = 0;
+      delay(temp_mp3);
+      cmd = 1;
+    }
   }
 
   if (cmd == 1)
