@@ -30,6 +30,7 @@ void fade_to()
     {
       to = 0;
       state = 9;
+      DEBUGSR = true;
     }
   }
 
