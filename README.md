@@ -1,7 +1,7 @@
 # PITAYA_lampadaire
  http://www.pitaya.fr/projet//journey-of-a-lamp-post/p3c2pr72.html
 
- https://raw.githubusercontent.com/ririfonfon/PITAYA_lamp_post/refs/heads/no-detecteur/schema_lampost%20new.jpg
+ ![schema_lampost new](https://raw.githubusercontent.com/ririfonfon/PITAYA_lamp_post/refs/heads/no-detecteur/schema_lampost%20new.jpg)
 
 ![schema_lampost new](https://user-images.githubusercontent.com/25557362/124382983-67ecaa80-dcca-11eb-9ae6-7d9ff446a38f.jpg)
 
