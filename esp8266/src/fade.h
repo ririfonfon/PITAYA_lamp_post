@@ -74,6 +74,7 @@ void fade_white()
   {
     p = 0;
     state = 6;
+    DEBUGSR = true;
   }
 
   dmxbuffer[1] = rouge;
@@ -148,6 +149,7 @@ void fade_rouge()
   {
     p = 0;
     state = 6;
+    DEBUGSR = true;
   }
 
   dmxbuffer[1] = rouge;
@@ -222,6 +224,7 @@ void fade_pink()
   {
     p = 0;
     state = 6;
+    DEBUGSR = true;
   }
 
   dmxbuffer[1] = rouge;
