@@ -118,4 +118,13 @@ int touch2;
 
 int bingo;
 
+/************************* Debug ********************/
+
+bool DEBUGSR = true;
+
+/************************** boucle  ******************/
+
+int boucle_Loop_count = 0;
+
+
 #endif
