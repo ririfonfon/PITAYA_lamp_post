@@ -36,6 +36,7 @@ void bingo_chase()
   {
     loop_time_bingo = 1500;
     state = 6;
+    DEBUGSR = true;
   }
 }
 
