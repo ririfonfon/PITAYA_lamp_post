@@ -12,7 +12,7 @@
 #define DEBUG 1
 // #define DEBUGDMX 1
 // #define DEBUGDMXvalue 1
-//#define DEBUGTOUCH 1
+// #define DEBUGTOUCH 1
 // #define DEBUGMP3 1
 // #define DEBUGSTATE 1
 
