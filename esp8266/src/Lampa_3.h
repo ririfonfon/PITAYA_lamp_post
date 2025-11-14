@@ -5,20 +5,20 @@
 //const long Cue = 294;
 const long Cue = 310;
 
-int R_lo = 127; // 127
-int G_lo = 100; // 100
+int R_lo = 200; // 127
+int G_lo = 150; // 100
 
-int R_l1 = 80;  // 80
-int G_l1 = 70;  // 70
+int R_l1 = 180;  // 80
+int G_l1 = 130;  // 70
 
 int R_m1 = 140; // 140
 int G_m1 = 110; // 110
 
-int R_m2 = 180; // 180
-int G_m2 = 130; // 130
+int R_m2 = 80; // 180
+int G_m2 = 70; // 130
 
-int R_hi = 200; // 200
-int G_hi = 150; // 150
+int R_hi = 127; // 200
+int G_hi = 100; // 150
 
 //          part 1
 int RList3[Cue] = {R_m1, R_l1, R_m1, R_lo, R_lo, R_l1, R_m1, R_l1, R_m1, R_l1,
