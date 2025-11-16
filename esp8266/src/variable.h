@@ -81,8 +81,6 @@ uint8_t temp_mp3 = 5; // delay_mp3_send
 const int no_presence = 200; // hc value
 const int presence = 100;    // hc gate
 
-const int MP3_Volume = 28; //volume mp3 (0-30)
-
 const long loop_time = 8000;   //gate de time
 const int loop_time_seq = 100; //gate de time de seq
 long loop_time_bingo = 1500;   //gate de couleur de bingo
