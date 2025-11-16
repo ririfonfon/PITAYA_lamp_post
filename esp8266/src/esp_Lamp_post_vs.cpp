@@ -6,10 +6,11 @@
 */
 /**************************************************************************/
 
-#define LAMP_POST 1 //ID du lamp_post
+#define LAMP_POST 3 //ID du lamp_post
 #define Boucle_Loop 3 // nombre de boucles de blabla
+const int MP3_Volume = 28; //volume mp3 (0-30)
 
-#define DEBUG 1
+// #define DEBUG 1
 // #define DEBUGDMX 1
 // #define DEBUGDMXvalue 1
 // #define DEBUGTOUCH 1
